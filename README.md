@@ -13,6 +13,8 @@
 
 ### **快速上手**
 
+如果已经在机器上搭建好了以太坊环境的话，则可以直接通过以下命令将项目运行起来。如果还没搭建的话可以先根据**环境部署**部分先搭建以太坊环境。
+
 ```shell
 # 将源码下载到本地
 git clone https://github.com/isKai/e-jewelry.git
@@ -61,3 +63,25 @@ truffle version
 #### 3. 安装Ganache
 
 [Ganache](https://www.trufflesuite.com/ganache)是一种用于以太坊开发的个人区块链，可用于部署合同，开发应用程序和运行测试。
+
+### 项目构建完整过程
+
+#### 1. 创建项目工程
+
+该项目使用了Truffle Boxes提供的pet-shop模板，所以直接将模板下载下来。宠物商店（pet-shop）是一个去中心化的区块链应用，通常作为区块链学习的入门应用，阅读其[官方文档](https://www.trufflesuite.com/tutorials/pet-shop)可以对以太坊的开发以及本项目有个大致的了解。
+
+```shell
+# 项目目录
+mkdir e-jewelry && cd e-jewelry
+
+# 下载（unbox）pet-shop模板
+truffle unbox pet-shop
+```
+
+下载完成后，会出现以下目录结构
+
+- `contracts/` 智能合约的文件夹，所有的智能合约文件都放置在这里，里面包含一个重要的合约 Migrations.sol
+- `migrations/` 用来处理部署（迁移）智能合约 ，迁移是一个额外特别的合约用来保存合约的变化。
+- `test/` 智能合约测试用例文件夹
+- `truffle.js/` 配置文件
+
