@@ -2,7 +2,7 @@
 
 基于区块链技术之可溯源珠宝电商平台
 
-
+项目地址：https://github.com/isKai/e-jewelry
 
 ### **使用环境**
 
